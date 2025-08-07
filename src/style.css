@@ -1,0 +1,109 @@
+body {
+    background-color: #ABB9BA;
+    margin: 50px;
+    font-family: "PT Serif", serif;
+}
+
+.outer-background {
+background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/781/original/rainy.png?1754494309");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    padding: 200px 100px 200px 100px;
+    border-radius: 8px;
+    
+}
+
+.background {
+background-color: #fef6f3;
+padding: 100px 50px;
+border-radius: 8px;
+}
+
+.search-form {
+padding-bottom: 20px;
+}
+
+.search-input {
+font-size: 20px;
+padding: 10px 100px 10px 20px;
+border-radius: 5px;
+border: 1px solid black;
+margin: 10px 10px 10px 0px;
+font-family: "PT Serif", serif;
+}
+
+.search-submit {
+    background-color: #5e8e9a;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-family: "PT Serif", serif;
+}
+
+a {
+    color: #5e8e9a;
+    text-decoration: none;
+}
+
+footer {
+    color: #8e9699;
+}
+
+.city {
+    font-family: "Leckerli One";
+    font-size: 40px;
+    display: flex; /* Ensure it can use flex properties */
+    align-items: center; /* Aligns city text vertically in center */
+    padding-top: 0px;
+}
+
+.temp-container {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    
+}
+
+.subtext {
+    font-size: 18px;
+    text-align: left;
+}
+
+.temp-item {
+    text-align: right;
+    font-size: 60px;
+    font-weight: 1000;
+    display: flex;
+    margin-top: -50px;
+}
+
+main {
+padding: 20px 50px;
+}
+
+.subscript {
+    font-size: 20px;
+    padding-top: 12px;
+    text-align: right;
+}
+
+strong {
+    color:#835E29;
+}
+
+footer {
+    margin-left: 50px;
+}
+
+.weather-app-icon {
+width: 80px;
+height: 80px;
+margin-right: -10px;
+}

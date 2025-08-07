@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>English Countryside Weather App</title>
+</head>
+<div class ="outer-background">
+<div class="background">
+<main>
+    <form class="search-form" id="search-form">
+        <input type="search" placeholder="Enter city here..."  class="search-input" id="search-form-input" required/>
+        <input type="submit" value="Search"class="search-submit" id="search-submit"/>
+    </form>
+<hr>    
+<body>
+    <div class="temp-container">
+        <div>
+        <h1 class="city" id="city"></h1>
+        <p class="subtext">
+            <span id="dow"></span>, 
+            <span id="description"></span> 
+            <br> Humidity: <strong id="humid"></strong> Wind: <strong id="wind"></strong>
+        </p>
+        </div>
+        <div class="temp-item" id="temp-item">
+            <span id="emoji"> 
+            </span>
+            <span id="big-temp">
+            </span>
+            <span class="subscript">°F
+            </span>
+        </div>
+    </div>
+    <hr>
+</main>
+    <footer> 
+        This project was coded by <a href="https://www.linkedin.com/in/jessica-zhu/" target="_blank">Jessica Zhu</a> open-sourced on <a href="https://github.com/maplel33f/shecodes-week7-hw" target="_blank">GitHub</a> and hosted on <a href="https://shecodes-wk7-weather-app.netlify.app/" target="_blank">Netlify</a></footer>
+    </div>
+    </div>
+<script src="src/index.js"></script>
+</body>
+</html>
