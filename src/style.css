@@ -94,6 +94,37 @@ padding: 20px 50px;
     text-align: right;
 }
 
+.forecast-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-date {
+    color: #8e9699;
+    font-size: 18px;
+    text-align: center;
+}
+
+.forecast-icon {
+    font-size: 80px;
+    text-align: center;
+}
+
+.forecast-all-temp {
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    color:#835E29;
+    
+}
+
+.forecast-temp {
+margin: 5px;
+}
+
 strong {
     color:#835E29;
 }

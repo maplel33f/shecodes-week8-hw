@@ -22,7 +22,9 @@ function refreshWeather(response) {
     updateDescription.innerHTML = response.data.condition.description;
     timeElement.innerHTML = formatDate(date);
 
-    
+    getForecast(response.data.city);
+
+}
 
     function formatDate(date) {
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -37,9 +39,8 @@ function refreshWeather(response) {
         
     }
 
-    
-}
 
+searchCity("Lisbon");
 
 function searchCity(city) {
     let apiKey = "46e24beo66ec32a8f3dbct0f7707b1b0";
@@ -57,4 +58,33 @@ function updateCity(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener ("submit", updateCity);
 
-searchCity("Lisbon");
+
+
+function getForecast(city) {
+    let apiKey = "46e24beo66ec32a8f3dbct0f7707b1b0";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+    //console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+    console.log(response.data);
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+let forecastHTML ="";
+
+days.forEach(function (day) {
+    forecastHTML = forecastHTML +
+    `<div class = weather-forecast-day>
+        <div class="forecast-date">${day}</div>
+            <div class="forecast-icon">🌦️</div>
+            <div class="forecast-all-temp">
+                <span class="forecast-temp"> 
+                <strong>54º </strong> </span>
+                 <span class="forecast-temp">67º</span>
+            </div>
+    </div>`; 
+});
+
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHTML;
+}
