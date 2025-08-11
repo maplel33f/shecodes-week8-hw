@@ -58,7 +58,11 @@ function updateCity(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener ("submit", updateCity);
 
-
+function liveDate (timestamp) {
+let date = new Date(timestamp * 1000);
+let days = ["Sun", "Mon", "Tue", "Thu", "Fri", "Sat"]
+return days[date.getDay()];
+}
 
 function getForecast(city) {
     let apiKey = "46e24beo66ec32a8f3dbct0f7707b1b0";
@@ -69,20 +73,22 @@ function getForecast(city) {
 
 function displayForecast(response) {
     console.log(response.data);
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
 let forecastHTML ="";
 
-days.forEach(function (day) {
+response.data.daily.forEach(function (day, index) {
+if (index <5) {
     forecastHTML = forecastHTML +
     `<div class = weather-forecast-day>
-        <div class="forecast-date">${day}</div>
-            <div class="forecast-icon">🌦️</div>
+        <div class="forecast-date">${liveDate(day.time)}</div>
+            <img src = "${day.condition.icon_url}" class="forecast-icon"</div>
             <div class="forecast-all-temp">
                 <span class="forecast-temp"> 
-                <strong>54º </strong> </span>
-                 <span class="forecast-temp">67º</span>
+                <strong>${Math.round(day.temperature.maximum)}º </strong> </span>
+                 <span class="forecast-temp">${Math.round(day.temperature.minimum)}º</span>
             </div>
-    </div>`; 
+    </div>
+    `; 
+    }
 });
 
 let forecastElement = document.querySelector("#forecast");

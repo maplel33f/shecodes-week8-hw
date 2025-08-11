@@ -108,8 +108,11 @@ padding: 20px 50px;
 }
 
 .forecast-icon {
-    font-size: 80px;
-    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 15px auto;
+
 }
 
 .forecast-all-temp {
@@ -123,6 +126,7 @@ padding: 20px 50px;
 
 .forecast-temp {
 margin: 5px;
+padding: 0px 5px;
 }
 
 strong {
