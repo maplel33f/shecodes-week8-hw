@@ -60,7 +60,7 @@ searchFormElement.addEventListener ("submit", updateCity);
 
 function liveDate (timestamp) {
 let date = new Date(timestamp * 1000);
-let days = ["Sun", "Mon", "Tue", "Thu", "Fri", "Sat"]
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 return days[date.getDay()];
 }
 
