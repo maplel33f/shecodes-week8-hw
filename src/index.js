@@ -40,7 +40,7 @@ function refreshWeather(response) {
     }
 
 
-searchCity("Lisbon");
+searchCity("Austin");
 
 function searchCity(city) {
     let apiKey = "46e24beo66ec32a8f3dbct0f7707b1b0";
